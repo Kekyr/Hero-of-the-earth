@@ -1,18 +1,26 @@
 ﻿using UnityEngine;
 
-public class BulletMovement : MonoBehaviour
+public class BulletMovement : MonoBehaviour, IPooledObject
 {
-    private Rigidbody2D _rigidBody;
     [SerializeField] private Vector2 _force=new Vector2(0,1);
+    private Rigidbody2D _rigidBody;
     
-    void Start()
+    
+    private void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
     }
-
     
-    void Update()
+    private void Update()
     {
         _rigidBody.AddForce(_force);
+    }
+
+    public void OnObjectSpawn()
+    {
+        if (_rigidBody != null)
+        {
+            _rigidBody.velocity = Vector2.zero;
+        }
     }
 }

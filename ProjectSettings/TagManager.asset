@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - Projectiles
+  - Player bullets
   - Items
-  - Ships
-  - 
+  - Enemies
+  - Player
   - 
   - 
   - 

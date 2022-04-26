@@ -5,25 +5,26 @@ using UnityEngine.Serialization;
 
 public class BulletSpawner : MonoBehaviour
 {
-     [SerializeField] private GameObject[] _bulletPrefabs;
-    private int _currentBulletPrefabIndex=0;
+    [SerializeField] private string[] _poolTags;
+    private int _currentPoolTagIndex = 0;
 
     private void Start()
     {
         Application.targetFrameRate = 80;
-        InvokeRepeating("Fire",0f,0.6f);
+        InvokeRepeating("Fire", 0f, 0.6f);
     }
 
     private void Fire()
     {
-        Instantiate(_bulletPrefabs[_currentBulletPrefabIndex],transform.position, Quaternion.identity);
+        //Instantiate(_bulletPrefabs[_currentBulletPrefabIndex], transform.position, Quaternion.identity);
+        ObjectPooler.instance.SpawnFromPool(_poolTags[_currentPoolTagIndex], transform.position,Quaternion.identity);
     }
 
-    public void ChangeBulletPrefab()
+    public void ChangePoolTag()
     {
-        if (_currentBulletPrefabIndex+1 < _bulletPrefabs.Length)
+        if (_currentPoolTagIndex + 1 < _poolTags.Length)
         {
-            _currentBulletPrefabIndex++;
+            _currentPoolTagIndex++;
         }
     }
 }

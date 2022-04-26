@@ -8,7 +8,15 @@ public class EnemyHealth : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        _bar.ReduceAmountOfHealth(collision.gameObject.GetComponent<Projectile>().AmountOfDamage);
-        Destroy(collision.gameObject);
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player bullets"))
+        {
+            _bar.ReduceAmountOfHealth(collision.gameObject.GetComponent<Projectile>().AmountOfDamage);
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
