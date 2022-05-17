@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Bar : MonoBehaviour
 {
     [SerializeField] private GameObject _healthBar;
+    [SerializeField] private GameObject _powerUpPrefab;
     private GameObject _mainObject;
-
+    
+    private Vector2 _offset = new Vector2(0.25f, -0.6f);
     private float _amountOfHealth = 1;
 
     private void Start()
@@ -20,6 +23,7 @@ public class Bar : MonoBehaviour
         _amountOfHealth -= amountOfDamage;
         if (_amountOfHealth <= 0)
         {
+            SpawnPowerUp();
             Destroy(_mainObject);
         }
         else
@@ -28,6 +32,18 @@ public class Bar : MonoBehaviour
             Delay();
         }
         
+    }
+
+    private void SpawnPowerUp()
+    {
+        //Random.InitState(GetHashCode());
+        if (Random.value <= 0.1)
+        {
+            Vector3 position = new Vector3(transform.position.x + _offset.x, transform.position.y + _offset.y,
+                _powerUpPrefab.transform.position.z);
+            Instantiate(_powerUpPrefab, position, Quaternion.identity);
+        }
+
     }
 
     private void ModifyAmountOfDamage(ref float amountOfDamage)

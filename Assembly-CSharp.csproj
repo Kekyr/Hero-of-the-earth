@@ -61,9 +61,11 @@
      <Compile Include="Assets\Scripts\Bar.cs" />
      <Compile Include="Assets\Scripts\BulletMovement.cs" />
      <Compile Include="Assets\Scripts\BulletSpawner.cs" />
+     <Compile Include="Assets\Scripts\EnemyBulletSpawner.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\IPooledObject.cs" />
      <Compile Include="Assets\Scripts\ObjectPooler.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Pool.cs" />
      <Compile Include="Assets\Scripts\PowerUp.cs" />

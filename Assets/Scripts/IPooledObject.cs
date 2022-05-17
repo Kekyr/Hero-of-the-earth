@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public interface IPooledObject
+﻿public interface IPooledObject
 {
     void OnObjectSpawn();
 }
