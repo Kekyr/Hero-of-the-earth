@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2505488400731137726}
   - component: {fileID: 2505488400731137720}
   - component: {fileID: 5846416157075466703}
-  - component: {fileID: 2505488400731137723}
   - component: {fileID: 2505488400731137722}
   - component: {fileID: 2505488400731137717}
   m_Layer: 11
@@ -81,7 +80,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -111,25 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29a05459f2496043af566121281b95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &2505488400731137723
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2505488400731137727}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4725922a47ca8fa41a5ef60275cd8337, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &2505488400731137722
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -154,7 +134,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2505488400731137727}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -165,8 +145,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!1 &2505488401834950655
 GameObject:
   m_ObjectHideFlags: 0

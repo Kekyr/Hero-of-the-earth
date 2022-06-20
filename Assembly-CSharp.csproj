@@ -58,18 +58,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Bar.cs" />
-     <Compile Include="Assets\Scripts\BulletMovement.cs" />
-     <Compile Include="Assets\Scripts\BulletSpawner.cs" />
-     <Compile Include="Assets\Scripts\EnemyBulletSpawner.cs" />
-     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
-     <Compile Include="Assets\Scripts\IPooledObject.cs" />
-     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
-     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Pool.cs" />
-     <Compile Include="Assets\Scripts\PowerUp.cs" />
-     <Compile Include="Assets\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Bullet\BulletMovement.cs" />
+     <Compile Include="Assets\Scripts\Bullet\BulletSpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyBulletSpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\ObjectPool\IPooledObject.cs" />
+     <Compile Include="Assets\Scripts\ObjectPool\ObjectPooler.cs" />
+     <Compile Include="Assets\Scripts\ObjectPool\Pool.cs" />
+     <Compile Include="Assets\Scripts\Other\Bar.cs" />
+     <Compile Include="Assets\Scripts\Other\PowerUp.cs" />
+     <Compile Include="Assets\Scripts\Other\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Unity-Logs-Viewer\Reporter\MultiKeyDictionary.cs" />
      <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Reporter.cs" />
      <Compile Include="Assets\Unity-Logs-Viewer\Reporter\ReporterGUI.cs" />
